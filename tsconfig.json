@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+//    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "strictNullChecks": false,
+    "noImplicitReturns": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

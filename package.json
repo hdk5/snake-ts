@@ -1,0 +1,31 @@
+{
+  "name": "SnakeTS",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --progress",
+    "watch": "webpack --progress --watch",
+    "server": "webpack-dev-server"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "base64-inline-loader": "^1.1.0",
+    "typescript": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hdk5/snake-ts/",
+  "repository": "github:hdk5/snake-ts"
+}
