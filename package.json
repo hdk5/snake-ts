@@ -1,6 +1,6 @@
 {
   "name": "SnakeTS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Snake game with computer enemies written in TypeScript",
   "author": "hdk5",
   "scripts": {
