@@ -9,17 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.mp3$/,
-                include: [
-                    path.resolve(__dirname, "src/soundmap/")
-                ],
-                use: 'base64-inline-loader'
-            },
-            {
-                test: /\.png$/,
-                include: [
-                    path.resolve(__dirname, "src/tilemap/")
-                ],
+                test: /\.(mp3|png)$/,
                 use: 'base64-inline-loader'
             },
             {

@@ -7,8 +7,5 @@
     "noEmit": true,
     "strictNullChecks": false,
     "noImplicitReturns": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }
