@@ -1,11 +1,8 @@
 class Direction {
-    public static Up = new Direction("Up");
-    public static Down = new Direction("Down");
-    public static Left = new Direction("Left");
-    public static Right = new Direction("Right");
-
-    constructor(private id: string) {
-    }
+    public static Up = new Direction();
+    public static Down = new Direction();
+    public static Left = new Direction();
+    public static Right = new Direction();
 
     reverse(): Direction {
         switch (this) {

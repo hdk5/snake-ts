@@ -19,7 +19,6 @@ export default class Game {
     private _frameId: number;
     private _canvasHelper: CanvasHelper;
     private _htmlHelper: HtmlHelper;
-    private _audioHelper: AudioHelper;
     private _preset: GamePreset;
 
     constructor(htmlRoot: HTMLElement) {
@@ -127,7 +126,7 @@ export default class Game {
 
         cancelAnimationFrame(this._frameId);
         this._lastFrameTimeStamp = performance.now();
-        this._frameId = requestAnimationFrame(this.animationLoop.bind(this));
+        this._frameId = requestAnimationFrame(this.gameLoop.bind(this));
     }
 
     private createFood(): Coords {
@@ -160,9 +159,9 @@ export default class Game {
 
     }
 
-    private animationLoop(frameTimeStamp: number) {
+    private gameLoop(frameTimeStamp: number) {
         if (frameTimeStamp - this._lastFrameTimeStamp < 1000 / this._difficulty) {
-            requestAnimationFrame(this.animationLoop.bind(this));
+            requestAnimationFrame(this.gameLoop.bind(this));
             return;
         }
         this._lastFrameTimeStamp = frameTimeStamp;
@@ -190,6 +189,9 @@ export default class Game {
             if (coords) {
                 AudioHelper.playDeathSound();
                 snake.alive = false;
+                if (snake != this._player) {
+                    this._score += this._difficulty * 10;
+                }
                 continue;
             }
             snake.move();
@@ -205,7 +207,7 @@ export default class Game {
         }
 
         if (this._player.alive) {
-            this._frameId = requestAnimationFrame(this.animationLoop.bind(this));
+            this._frameId = requestAnimationFrame(this.gameLoop.bind(this));
         } else {
             this.gameOver();
         }

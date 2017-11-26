@@ -128,7 +128,7 @@ export default class {
                 open.add(neighbourH);
 
                 let currentG = gScore.has(currentH) ? gScore.get(currentH) : Infinity;
-                let neighbourG = gScore.has(neighbourH) ? gScore.get(neighbourH): Infinity;
+                let neighbourG = gScore.has(neighbourH) ? gScore.get(neighbourH) : Infinity;
 
                 let tgScore = currentG + 1;
                 if (tgScore >= neighbourG) {

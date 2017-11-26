@@ -1,10 +1,12 @@
 {
   "name": "SnakeTS",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Snake game with computer enemies written in TypeScript",
+  "author": "hdk5",
   "scripts": {
-    "build": "webpack --progress",
-    "watch": "webpack --progress --watch",
-    "server": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress"
   },
   "babel": {
     "presets": [
@@ -12,7 +14,6 @@
       "stage-0"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
     "awesome-typescript-loader": "^3.4.0",
     "babel-core": "^6.26.0",

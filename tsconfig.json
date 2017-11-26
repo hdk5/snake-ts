@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
-//    "sourceMap": true,
+    "sourceMap": true,
     "strict": true,
     "noEmit": true,
     "strictNullChecks": false,

@@ -1,6 +1,5 @@
 import Direction from "./Direction"
 import Coords from "./Coords";
-import Game from "./Game";
 import Util from "./Util";
 
 export default class Snake {
