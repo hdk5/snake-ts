@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress"
+    "build": "webpack --progress",
+    "deploy": "gh-pages -d dist"
   },
   "babel": {
     "presets": [
@@ -21,6 +22,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "base64-inline-loader": "^1.1.0",
+    "gh-pages": "^1.1.0",
     "typescript": "^2.6.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "webpack": "^3.8.1",
