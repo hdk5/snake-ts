@@ -56,7 +56,7 @@ export default class ScoreBoardHelper {
         let fb: Array<Score> = sb.hasOwnProperty(map) ? sb[map] : [];
         return fb
             .filter(value => value.score > 0)
-            .sort((a: any, b: any) => b.score - a.score)
+            .sort((a: any, b: any) => b.score - a.score || a.date - b.date)
             .slice(0, 10);
     }
 
