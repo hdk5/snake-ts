@@ -17,15 +17,11 @@ export default class {
         let getHeuristic: (p1: Coords, p2: Coords) => number = (p1, p2) => {
             let r = Math.min(
                 Math.abs(p1.row - p2.row),
-                // Infinity
                 height - Math.abs(p1.row - p2.row)
-                // Math.min(p1.row, p2.row) + height - Math.max(p1.row, p2.row)
             );
             let c = Math.min(
                 Math.abs(p1.column - p2.column),
-                // Infinity
                 width - Math.abs(p1.column - p2.column)
-                // Math.min(p1.column, p2.column) + width - Math.max(p1.column, p2.column)
             );
             return r + c;
             // return 0;

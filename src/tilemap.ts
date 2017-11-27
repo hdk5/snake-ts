@@ -1,6 +1,6 @@
 declare function require(path: string): any;
 
-class Tilemap {
+export default class Tilemap {
     static food: HTMLImageElement = new Image();
     static fieldEmpty: HTMLImageElement = new Image();
     static fieldWall: HTMLImageElement = new Image();
@@ -25,5 +25,3 @@ Tilemap.playerHead.src = require("./tilemap/player_head.png");
 Tilemap.playerTail.src = require("./tilemap/player_tail.png");
 Tilemap.playerStraight.src = require("./tilemap/player_straight.png");
 Tilemap.playerRotate.src = require("./tilemap/player_rotate.png");
-
-export default Tilemap

@@ -10,7 +10,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(mp3|png)$/,
-                use: 'base64-inline-loader'
+                use: 'url-loader'
             },
             {
                 test: /\.tsx?$/,
